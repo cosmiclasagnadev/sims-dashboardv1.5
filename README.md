@@ -1,2 +1,2 @@
 # sims-dashboardv2
-Main file is in html/dashboard/dashboard.html
+Main file is in html/index.html
