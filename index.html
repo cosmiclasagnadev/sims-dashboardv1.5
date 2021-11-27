@@ -4,6 +4,7 @@
   <head>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://kit.fontawesome.com/fb628c1538.js" crossorigin="anonymous"></script>
+    
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>SIMS: Dashboard 2.0</title>
@@ -408,7 +409,7 @@
    <div class="col-md-12 col-lg-12">
       <div class="row"> 
          <div class="col-md-12 col-xl-6" >
-            <div class="card" data-aos="fade-up" data-aos-delay="800" id="map-area">
+            <div class="card" data-aos="fade-up" data-aos-delay="800" id="map-area" onClick="openModal();">
                 <div class="card-header d-flex justify-content-between align-items-center flex-wrap">
                    <div class="header-title">
                       <h4 class="card-title">Map Area</h4>  
@@ -418,6 +419,13 @@
                    <svg class="bd-placeholder-img img-thumbnail" width="100%" height="355" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Map to be put here</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Map to be put here</text></svg>
                 </div>
              </div>
+         </div>
+
+         <div id="mapModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+               <h2>Map here</h2>
+            </div>
          </div>
          <div class="col-md-12 col-xl-6">
             <div class="card" data-aos="fade-up" data-aos-delay="800" id="map-area">
@@ -1204,5 +1212,6 @@
     <script src="html/assets/js/hope-ui.js" defer></script>
 
     <script src="chart-data.js" ></script>
+    <script src="map-data.js"></script>
   </body>
 </html>
