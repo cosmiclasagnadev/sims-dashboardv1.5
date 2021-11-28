@@ -2,9 +2,14 @@
 <!doctype html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://kit.fontawesome.com/fb628c1538.js" crossorigin="anonymous"></script>
-    
+    <script>
+       $(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+    </script>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>SIMS: Dashboard 2.0</title>
@@ -31,7 +36,7 @@
       <link rel="stylesheet" href="html/assets/css/rtl.min.css"/>
 
   </head>
-  <body class="  ">
+  <body onLoad="mapLoad();" class="  ">
     <!-- loader Start -->
     <div id="loading">
       <div class="loader simple-loader">
@@ -423,8 +428,16 @@
 
          <div id="mapModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-               <h2>Map here</h2>
+            <div class="modal-content p-4" id="map-canvas">
+               <!-- Map Content here -->
+               <svg viewBox="0 0 1199 460" 
+               preserveAspectRatio="xMinYMin meet" id="drawMap">
+                  <image xlink:href="/html/assets/images/sample-pest-map.png">
+                  </image>
+                  
+                  <!-- <path cx="220" cy="320" id="dp_path001"  fill="none" fill-rule="evenodd" stroke="black" stroke-width="4" d="M 380.34,401.76 C 385.624,401.76 389.908,406.043 389.908,411.327 C 389.908,416.611 385.624,420.893 380.34,420.893 C 375.056,420.893 370.772,416.611 370.772,411.327 C 370.772,406.043 375.056,401.76 380.34,401.76 Z "/> -->
+                  <!-- <circle cx="220" cy="320" r="20" stroke="#d4ffde" stroke-width="3" fill="red" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Test pest"/> -->
+               </svg>
             </div>
          </div>
          <div class="col-md-12 col-xl-6">

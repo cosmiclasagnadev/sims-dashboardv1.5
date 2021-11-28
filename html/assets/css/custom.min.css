@@ -619,3 +619,24 @@ body.uikit .btn-download {
 #map-area {
   cursor: pointer;
 }
+
+#map-canvas {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#map-canvas svg {
+  padding: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#map-canvas image {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
