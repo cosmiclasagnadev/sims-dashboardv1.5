@@ -640,3 +640,8 @@ body.uikit .btn-download {
   width: 100%;
   object-fit: cover;
 }
+
+#map-thumb image {
+  object-fit: contain;
+  width: 100%;
+}

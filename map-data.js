@@ -19,12 +19,6 @@ let map_state = [
     } 
   ]
 
-
-// Load map data
-
-
-
-
 // helper function for setting multiple attributes at once on an element
 function setAttributes(el, attrs) {
   for (let key in attrs) {
@@ -40,14 +34,15 @@ function openModal() {
 
 
 // Close the modal
-
 function closeModal() {
     document.getElementById("mapModal").style.display = "none";
 }
 
-
+// Load map data
 function mapLoad(){
   let drawMap = document.getElementById('drawMap');
+
+
   let mapElement = document.createElementNS('http://www.w3.org/2000/svg','circle');
 
   setAttributes(mapElement, {'cx': map_state[0].coordinate.x, 'cy': map_state[0].coordinate.y, 'r': '20', 'stroke': '#000000', 'stroke-width': '3', 'fill': 'red', 'data-bs-toggle':'tooltip', 'data-bs-placement':'bottom', 'title':map_state[0].pest_found[0].pest_name});
