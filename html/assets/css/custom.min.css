@@ -630,15 +630,15 @@ body.uikit .btn-download {
 #map-canvas svg {
   padding: 40px;
   display: inline-block;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
 #map-canvas image {
-  height: 60vh;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  position: absolute;
 }
 
 #map-thumb image {
