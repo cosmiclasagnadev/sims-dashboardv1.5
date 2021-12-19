@@ -1,10 +1,12 @@
+const CAT_TRAP = '<path id="dp_path001" fill="none" fill-rule="evenodd" stroke="black" stroke-width="4" d="M 380.34,401.76 C 385.624,401.76 389.908,406.043 389.908,411.327 C 389.908,416.611 385.624,420.893 380.34,420.893 C 375.056,420.893 370.772,416.611 370.772,411.327 C 370.772,406.043 375.056,401.76 380.34,401.76 Z "/>'
+const MC_TRAP = '<path id="dp_path001" fill="none" fill-rule="evenodd" stroke="black" stroke-width="4" d="M 368.737,196.803 L 391.4,196.803 L 391.4,213.383 L 368.737,213.383 Z "/>'
 let map_state = [
     {
       device_code: "STX-RBT-1712-0145",
       icon: 'triangle.png',
       coordinate: {
-      x: 320,
-      y: 120	
+      x: 390,
+      y: 220	
        },
        pest_found: [
       {
@@ -56,19 +58,19 @@ function closeModal() {
 
 // Load map data
 function mapLoad(){
-  // Get the map area to be drawn to
+  // // Get the map area to be drawn to
   let drawMap = document.getElementById('drawMap');
+  // let container = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  // container.innerHTML = CAT_TRAP;
+  // let newMapElement = container.firstChild;
+  
+  let mapElement = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  mapElement.setAttributeNS(null, 'transform', `translate(${map_state[0].coordinate.x}, ${map_state[0].coordinate.y})`);
+  mapElement.innerHTML = MC_TRAP;
 
-  // create the svg element to be added
-  let mapElement = document.createElementNS('http://www.w3.org/2000/svg','circle');
-
-  // use helper function to set attributes of created svg element from data passed
-  setAttributes(mapElement, {'cx': map_state[0].coordinate.x, 'cy': map_state[0].coordinate.y});
-
-  // add the element to the map area on the DOM
   drawMap.appendChild(mapElement);
-
 }
+
 
 function changeDropdownValue(value) {
   let stringValue = ''
