@@ -447,13 +447,17 @@
 
          <div id="mapModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content p-4" id="map-canvas">
+            <div class="modal-content p-4 scrollbar" id="map-canvas">
                <!-- Map Content here -->
-               <svg viewBox="0 0 1199 460" 
-               preserveAspectRatio="xMidYMid meet" id="drawMap">
+               <!-- <svg width='1199' height='460' viewBox="0 0 831 463" 
+               preserveAspectRatio="xMidYMin meet" id="drawMap">
                   <image id='modalMapPic' xlink:href="html/assets/images/map1areaA.png">
                   </image>
-               </svg> 
+               </svg>  -->
+               <div id='mapDiv' style='position: relative;'>
+                  <img id='modalMapPic' src="html/assets/images/map1areaA.png" alt=""/>
+
+               </div>
                <div class='d-flex flex-column'>
                   <p class='text-white p-2 mb-0 bg-primary'>Device Condition Legend</p>
                   <div class="d-flex flex-row p-2 bg-secondary ">

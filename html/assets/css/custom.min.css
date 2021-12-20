@@ -575,7 +575,7 @@ body.uikit .btn-download {
 ::-webkit-scrollbar-thumb {
   background: #c4c8cb;
   border-radius: 5px;
-  border: 3px solid #ffffff;
+  border: 3px solid transparent;
 }
 
 /* Handle on hover */
@@ -644,4 +644,24 @@ body.uikit .btn-download {
 #map-thumb image {
   object-fit: contain;
   width: 100%;
+}
+
+img.newMapElement {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+}
+
+div#mapDiv {
+  width: 831px;
+  height: 463px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modalMapPic {
+  width: 100%;
+  object-fit: contain;
 }
