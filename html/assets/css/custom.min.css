@@ -665,3 +665,7 @@ div#mapDiv {
   width: 100%;
   object-fit: contain;
 }
+
+li#custom-slider-width {
+  width: calc(77vw / 3) !important;
+}
